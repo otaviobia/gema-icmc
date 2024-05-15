@@ -1,6 +1,5 @@
-* {
+body {
     color: white;
-    margin: 0;
     font-family: "Poppins", sans-serif;
 }
 
@@ -25,7 +24,7 @@ ol, ul {
     width: 100%;
 }
 
-.header {
+header {
     background-color: transparent;
     position: fixed;
     top: 0;
@@ -34,7 +33,7 @@ ol, ul {
     z-index: 9999;
 }
 
-.navigation {
+nav {
     width: 75vw;
     margin-left: auto;
     margin-right: auto;
@@ -48,12 +47,12 @@ ol, ul {
     align-items: center;
 }
 
-.header ul {
+header ul {
     display: flex;
     justify-content: space-between;
 }
 
-.header li a {
+header li a {
     padding: 20px;
     font-weight: 5vw;
 }
@@ -80,7 +79,7 @@ ol, ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    flex-direction: column;
+    flex-direction: column; 
     padding: 0 0 3rem 3rem;
     
 }
@@ -145,11 +144,11 @@ ol, ul {
     top: 0;
 }
 
-.footer {
+footer {
     background-color: #282828;
 }
 
-.footer a {
+footer a {
     color: #5ED8FF;
 }
 
