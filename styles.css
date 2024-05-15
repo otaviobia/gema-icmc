@@ -1,0 +1,502 @@
+* {
+    color: white;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-image: url("./background.png");
+    background-attachment: fixed;
+    background-position: center;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+.container {
+    display: block;
+    width: 100%;
+}
+
+.header {
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    transition: background-color 0.3s;
+    z-index: 9999;
+}
+
+.navigation {
+    width: 75vw;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
+    padding: 10px 40px 10px 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header li a {
+    padding: 20px;
+    font-weight: 5vw;
+}
+
+.logo {
+    height: 70px;
+}
+
+.hero {
+    height: 100vh;
+    width: 75vw;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 100; }
+}
+
+.hero-left {
+    width: 48%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 0 0 3rem 3rem;
+    
+}
+
+.hero-left * {
+    animation-name: fade-in;
+    animation-fill-mode: forwards;
+    animation-duration: 4s;
+    animation-timing-function: ease;
+}
+
+.hero-left h1 {
+    font-size: 3.2rem;
+}
+
+.hero-left p {
+    color: #DBDBDB;
+    font-size: 1.8rem;
+    padding-bottom: 1.5rem;
+}
+
+.logos-hero img {
+    width: 60px;
+    padding-right: 15px;
+}
+
+.hero-right {
+    width: 37%;
+    position: relative;
+    overflow: hidden;
+}
+
+
+@keyframes baloon-up {
+    from { bottom: -600px; }
+    to { bottom: 0; }
+}
+  
+.hero-right img {
+    animation-name: baloon-up;
+    animation-fill-mode: forwards;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    height: 90%;
+    width: auto;
+    position: absolute; 
+    bottom: -600px;
+}
+
+.btn {
+    width: 100px;
+    font-size: 1.3rem;
+    padding: 3px 50px 3px 50px;
+    background-color: #C39F00;
+    border: solid 1px #C39F00;
+    border-radius: 10px;
+}
+
+.sticky {
+    background-color: #191946;
+    position: fixed;
+    top: 0;
+}
+
+.footer {
+    background-color: #282828;
+}
+
+.footer a {
+    color: #5ED8FF;
+}
+
+.footer-content {
+    width: 75vw;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.sobre {
+    background-color: #ECECEC;
+}
+
+.sobre-content {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    padding: 48px;
+    width: 75vw;
+    margin: auto;
+}
+
+.sobre span {
+    width: 50%;
+    padding-right: 0px;
+}
+
+.sobre h1 {
+    font-size: 2.8rem;
+    color: black;
+}
+
+.sobre p {
+    font-size: 1.6rem;
+    color: #4C4C4C;
+}
+
+.sobre img {
+    width: 400px;
+    height: fit-content;
+}
+
+.redes {
+    text-align: center;
+    margin: 50px;
+}
+
+.redes p {
+    color: #C8C8C8;
+}
+
+.midia {
+    padding: 30px;
+    text-align: center;
+}
+
+.midia p {
+    color: #D2D2D2;
+}
+
+.noticias-box {
+    display: flex;
+    justify-content: center;
+}
+
+.noticia-item {
+    border-radius: 20px;
+    margin: 20px;
+    width: 360px;
+    background-color: white;
+}
+
+.noticia-item img {
+    width: 100%;
+    height: 220px;
+    border-radius: 19px 19px 0 0; 
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.noticia-item p {
+    font-size: 1.2rem;
+    padding: 0 15px 15px 15px;
+    color: black;
+}
+
+.redes-sociais {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.redes-sociais li {
+    padding: 10px;
+}
+
+.premiacoes {
+    text-align: center;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    padding: 30px;
+    background-color: #ECECEC;
+}
+
+.premiacoes h1 {
+    color: black;
+}
+
+.premiacoes p {
+    color: #282828;
+}
+
+.premiacoes-box {
+    display: flex;
+    justify-content: center;
+}
+
+.premiacao-item {
+    border-radius: 20px;
+    padding: 40px 0px 40px 0px;
+    margin: 20px;
+    width: 360px;
+    background-color: white;
+}
+
+.premiacao-item img {
+    width: auto;
+    height: 120px;
+}
+
+.premiacao-item p {
+    font-size: 1.2rem;
+    padding: 0 15px 15px 15px;
+    color: black;
+}
+
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+  }
+
+/* The Modal (background) */
+.modal-olimpiada {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100vw; /* Full width */
+    height: 100vh; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 8px 20px 15px 20px;
+    border: 1px solid #888;
+    border-radius: 25px;
+    width: 50%; /* Could be more or less, depending on screen size */
+  }
+
+  .nome-olimpiada {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    justify-content: left;
+    align-items: center;
+  }
+
+  .modal-topo {
+    width: 100%;
+    padding: 0px 20px 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .modal-base {
+    width: 100%;
+    padding: 10px 20px 0px 20px;
+  }
+
+  .modal-item  {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+  .medalhas {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+    padding-bottom: 10px;
+  }
+
+  .medalhas span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .medalhas span p {
+    padding: 0;
+  }
+
+  .modal-content img {
+    width: 60px;
+    height: fit-content;
+  }
+
+  .modal-content h1, h2 {
+    color: black;
+    font-size: 1.2rem;
+  }
+
+  .modal-content li {
+    color: #4C4C4C;
+  }
+
+  .close-btn-div {
+    height: 30px;
+    width: 100%;
+  }
+
+  /* The Close Button */
+  .close {
+    color: #191946;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #C39F00;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .hero {
+        margin: 0;
+        padding: 0;
+        height: 94vh;
+        width: 100%;
+    }
+
+    .hero-left {
+        padding: 15px;
+        width: 100%;
+    }
+
+    .hero-left p {
+        font-size: 1.6rem;
+    }
+
+    .hero-left h1 {
+        font-size: 3rem;
+    }
+
+    .hero-left span {
+        height: 40px;
+    }
+
+    .hero-right {
+        display: none;
+    }
+
+    .footer-content {
+        justify-content: center;
+    }
+
+    .premiacoes-box {
+        flex-wrap: wrap;
+    }
+
+    .noticias-box {
+        flex-wrap: wrap;
+    }
+
+    .sobre {
+        padding: 25px;
+    }
+
+    .sobre-content {
+        text-align: center;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        justify-content: left;
+    }
+
+    .sobre-content h1 {
+        padding-top: 15px;
+    }
+
+    .sobre-content p {
+        font-size: 1rem;
+        text-align: justify;
+        text-justify: newspaper;
+    }
+
+    .sobre-content span {
+        width: 100%;
+    }
+
+    .sobre-content img {
+        width: 100%;
+    }
+
+    .navigation {
+        justify-content: center;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}
