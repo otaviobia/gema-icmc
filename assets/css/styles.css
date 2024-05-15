@@ -5,7 +5,7 @@
 }
 
 body {
-    background-image: url("./background.png");
+    background-image: url("../img/background.png");
     background-attachment: fixed;
     background-position: center;
     min-height: 100vh;
@@ -289,7 +289,7 @@ ol, ul {
     color: black;
 }
 
-.stop-scrolling {
+.bloquear-scroll {
     height: 100%;
     overflow: hidden;
   }
