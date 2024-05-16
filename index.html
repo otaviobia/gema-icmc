@@ -17,8 +17,9 @@
   <meta property="og:image" content="https://linktr.ee/og/image/gema.icmc.usp.jpg">
   <meta property="og:url" content="https://gema.icmc.usp.br">
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -27,28 +28,11 @@
       <div class="close-btn-div"><span class="close">&times;</span></div>
       <div class="modal-topo">
         <div class="nome-olimpiada">
-          <img src="https://i.imgur.com/JejIVBy.png" alt="OBI">
-          <h1>Olimpíada Brasileira de Informática (OBI)</h1>
+          <img class="foto-olimpiada" src="#" alt="Foto Olimpíada">
+          <h1 class="texto-olimpiada">Olimpíada Brasileira de Informática (OBI)</h1>
         </div>
       </div>
       <div class="modal-base">
-        <div class="modal-item">
-          <h2>2024</h2>
-          <ol>
-            <li>Pietra Gullo, a gema</li>
-            <li>Pietra Gullo, a gema</li>
-            <li>Pietra Gullo, a gema</li>
-          </ol>
-        </div>
-        <hr>
-        <div class="modal-item">
-          <h2>2023</h2>
-          <ol>
-            <li>Pietra Gullo, a gema</li>
-            <li>Pietra Gullo, a gema</li>
-            <li>Pietra Gullo, a gema</li>
-          </ol>
-        </div>
       </div>
     </div>
   </div>
@@ -59,13 +43,13 @@
       </a>
       <ul>
         <li>
-          <a href="https://linktr.ee/gema.icmc.usp">Conhecer</a>
+          <a href="https://linktr.ee/gema.icmc.usp" title="Conheça mais sobre o grupo!">Conhecer</a>
         </li>
         <li>
-          <a href="http://bit.ly/gema023">Telegram</a>
+          <a href="http://bit.ly/gema023" title="Acesse nosso canal do Telegram!">Telegram</a>
         </li>
         <li>
-          <a href="https://www.youtube.com/@GEMAICMC">Conteúdo</a>
+          <a href="https://www.youtube.com/@GEMAICMC" title="Veja nosso conteúdo gravado no YouTube!">Conteúdo</a>
         </li>
       </ul>
     </nav>
@@ -77,7 +61,7 @@
         <div class="texto-hero">
           <h1>O Grupo de Programação<br>Competitiva da USP.</h1>
           <p>Quer aprender os algoritmos mais avançados<br>e ganhar medalhas? Cola com a gente!</p>
-          <a class="btn">Conhecer</a>
+          <button type="button" class="btn" onclick="mostrarSobre()">Conhecer</button>
         </div>
         <div class="logos-hero">
           <img src="./assets/img/logo-usp.png" alt="USP">
@@ -105,117 +89,12 @@
       <h1>GEMA na Mídia</h1>
       <p>Veja o que andam falando do GEMA!</p>
       <div class="noticias-box">
-        <div class="noticia-item">
-          <img src="https://imgur.com/V4Jzzxl.jpeg" alt="Foto da Notícia">
-          <p>GEMA é Classificao para o Mundial de 2024</p>
-        </div>
-        <div class="noticia-item">
-          <img src="https://i.imgur.com/oxbiLTo.jpeg" alt="Foto da Notícia">
-          <p>Pietra do GEMA é campeã da MFP</p>
-        </div>
-        <div class="noticia-item">
-          <img src="https://i.imgur.com/wy0o6Gh.jpeg" alt="Foto da Notícia">
-          <p>OBI 2023: Uma das melhores participações do GEMA</p>
-        </div>
       </div>
     </section>
     <section class="premiacoes">
       <h1>Premiações do GEMA!</h1>
       <p>Veja o que já ganhamos por aí ;)</p>
       <div class="premiacoes-box">
-        <div class="premiacao-item">
-          <img src="https://i.imgur.com/JejIVBy.png" alt="OBI">
-          <div class="medalhas">
-            <span>
-              <svg fill="#C39F00" fill-rule="evenodd" width="20px" height="20px" xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 512 512">
-                <path
-                  d="M4.1 38.2C1.4 34.2 0 29.4 0 24.6C0 11 11 0 24.6 0H133.9c11.2 0 21.7 5.9 27.4 15.5l68.5 114.1c-48.2 6.1-91.3 28.6-123.4 61.9L4.1 38.2zm503.7 0L405.6 191.5c-32.1-33.3-75.2-55.8-123.4-61.9L350.7 15.5C356.5 5.9 366.9 0 378.1 0H487.4C501 0 512 11 512 24.6c0 4.8-1.4 9.6-4.1 13.6zM80 336a176 176 0 1 1 352 0A176 176 0 1 1 80 336zm184.4-94.9c-3.4-7-13.3-7-16.8 0l-22.4 45.4c-1.4 2.8-4 4.7-7 5.1L168 298.9c-7.7 1.1-10.7 10.5-5.2 16l36.3 35.4c2.2 2.2 3.2 5.2 2.7 8.3l-8.6 49.9c-1.3 7.6 6.7 13.5 13.6 9.9l44.8-23.6c2.7-1.4 6-1.4 8.7 0l44.8 23.6c6.9 3.6 14.9-2.2 13.6-9.9l-8.6-49.9c-.5-3 .5-6.1 2.7-8.3l36.3-35.4c5.6-5.4 2.5-14.8-5.2-16l-50.1-7.3c-3-.4-5.7-2.4-7-5.1l-22.4-45.4z" />
-              </svg>
-              <p>10</p>
-            </span>
-            <span>
-              <svg fill="#8A8A8A" fill-rule="evenodd" width="20px" height="20px" xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 512 512">
-                <path
-                  d="M4.1 38.2C1.4 34.2 0 29.4 0 24.6C0 11 11 0 24.6 0H133.9c11.2 0 21.7 5.9 27.4 15.5l68.5 114.1c-48.2 6.1-91.3 28.6-123.4 61.9L4.1 38.2zm503.7 0L405.6 191.5c-32.1-33.3-75.2-55.8-123.4-61.9L350.7 15.5C356.5 5.9 366.9 0 378.1 0H487.4C501 0 512 11 512 24.6c0 4.8-1.4 9.6-4.1 13.6zM80 336a176 176 0 1 1 352 0A176 176 0 1 1 80 336zm184.4-94.9c-3.4-7-13.3-7-16.8 0l-22.4 45.4c-1.4 2.8-4 4.7-7 5.1L168 298.9c-7.7 1.1-10.7 10.5-5.2 16l36.3 35.4c2.2 2.2 3.2 5.2 2.7 8.3l-8.6 49.9c-1.3 7.6 6.7 13.5 13.6 9.9l44.8-23.6c2.7-1.4 6-1.4 8.7 0l44.8 23.6c6.9 3.6 14.9-2.2 13.6-9.9l-8.6-49.9c-.5-3 .5-6.1 2.7-8.3l36.3-35.4c5.6-5.4 2.5-14.8-5.2-16l-50.1-7.3c-3-.4-5.7-2.4-7-5.1l-22.4-45.4z" />
-              </svg>
-              <p>6</p>
-            </span>
-            <span>
-              <svg fill="#D77025" fill-rule="evenodd" width="20px" height="20px" xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 512 512">
-                <path
-                  d="M4.1 38.2C1.4 34.2 0 29.4 0 24.6C0 11 11 0 24.6 0H133.9c11.2 0 21.7 5.9 27.4 15.5l68.5 114.1c-48.2 6.1-91.3 28.6-123.4 61.9L4.1 38.2zm503.7 0L405.6 191.5c-32.1-33.3-75.2-55.8-123.4-61.9L350.7 15.5C356.5 5.9 366.9 0 378.1 0H487.4C501 0 512 11 512 24.6c0 4.8-1.4 9.6-4.1 13.6zM80 336a176 176 0 1 1 352 0A176 176 0 1 1 80 336zm184.4-94.9c-3.4-7-13.3-7-16.8 0l-22.4 45.4c-1.4 2.8-4 4.7-7 5.1L168 298.9c-7.7 1.1-10.7 10.5-5.2 16l36.3 35.4c2.2 2.2 3.2 5.2 2.7 8.3l-8.6 49.9c-1.3 7.6 6.7 13.5 13.6 9.9l44.8-23.6c2.7-1.4 6-1.4 8.7 0l44.8 23.6c6.9 3.6 14.9-2.2 13.6-9.9l-8.6-49.9c-.5-3 .5-6.1 2.7-8.3l36.3-35.4c5.6-5.4 2.5-14.8-5.2-16l-50.1-7.3c-3-.4-5.7-2.4-7-5.1l-22.4-45.4z" />
-              </svg>
-              <p>4</p>
-            </span>
-          </div>
-          <p>Olimpíada Brasileira de Informática (OBI)</p>
-          <a class="btn abrir-modal" href="javascript:void(0);" onclick="abrirModal()">Ver Mais</a>
-        </div>
-        <div class="premiacao-item">
-          <img src="https://i.imgur.com/5pM1hlG.png" alt="IPC Nacional">
-          <div class="medalhas">
-            <span>
-              <svg fill="#C39F00" fill-rule="evenodd" width="20px" height="20px" xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 512 512">
-                <path
-                  d="M4.1 38.2C1.4 34.2 0 29.4 0 24.6C0 11 11 0 24.6 0H133.9c11.2 0 21.7 5.9 27.4 15.5l68.5 114.1c-48.2 6.1-91.3 28.6-123.4 61.9L4.1 38.2zm503.7 0L405.6 191.5c-32.1-33.3-75.2-55.8-123.4-61.9L350.7 15.5C356.5 5.9 366.9 0 378.1 0H487.4C501 0 512 11 512 24.6c0 4.8-1.4 9.6-4.1 13.6zM80 336a176 176 0 1 1 352 0A176 176 0 1 1 80 336zm184.4-94.9c-3.4-7-13.3-7-16.8 0l-22.4 45.4c-1.4 2.8-4 4.7-7 5.1L168 298.9c-7.7 1.1-10.7 10.5-5.2 16l36.3 35.4c2.2 2.2 3.2 5.2 2.7 8.3l-8.6 49.9c-1.3 7.6 6.7 13.5 13.6 9.9l44.8-23.6c2.7-1.4 6-1.4 8.7 0l44.8 23.6c6.9 3.6 14.9-2.2 13.6-9.9l-8.6-49.9c-.5-3 .5-6.1 2.7-8.3l36.3-35.4c5.6-5.4 2.5-14.8-5.2-16l-50.1-7.3c-3-.4-5.7-2.4-7-5.1l-22.4-45.4z" />
-              </svg>
-              <p>10</p>
-            </span>
-            <span>
-              <svg fill="#8A8A8A" fill-rule="evenodd" width="20px" height="20px" xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 512 512">
-                <path
-                  d="M4.1 38.2C1.4 34.2 0 29.4 0 24.6C0 11 11 0 24.6 0H133.9c11.2 0 21.7 5.9 27.4 15.5l68.5 114.1c-48.2 6.1-91.3 28.6-123.4 61.9L4.1 38.2zm503.7 0L405.6 191.5c-32.1-33.3-75.2-55.8-123.4-61.9L350.7 15.5C356.5 5.9 366.9 0 378.1 0H487.4C501 0 512 11 512 24.6c0 4.8-1.4 9.6-4.1 13.6zM80 336a176 176 0 1 1 352 0A176 176 0 1 1 80 336zm184.4-94.9c-3.4-7-13.3-7-16.8 0l-22.4 45.4c-1.4 2.8-4 4.7-7 5.1L168 298.9c-7.7 1.1-10.7 10.5-5.2 16l36.3 35.4c2.2 2.2 3.2 5.2 2.7 8.3l-8.6 49.9c-1.3 7.6 6.7 13.5 13.6 9.9l44.8-23.6c2.7-1.4 6-1.4 8.7 0l44.8 23.6c6.9 3.6 14.9-2.2 13.6-9.9l-8.6-49.9c-.5-3 .5-6.1 2.7-8.3l36.3-35.4c5.6-5.4 2.5-14.8-5.2-16l-50.1-7.3c-3-.4-5.7-2.4-7-5.1l-22.4-45.4z" />
-              </svg>
-              <p>6</p>
-            </span>
-            <span>
-              <svg fill="#D77025" fill-rule="evenodd" width="20px" height="20px" xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 512 512">
-                <path
-                  d="M4.1 38.2C1.4 34.2 0 29.4 0 24.6C0 11 11 0 24.6 0H133.9c11.2 0 21.7 5.9 27.4 15.5l68.5 114.1c-48.2 6.1-91.3 28.6-123.4 61.9L4.1 38.2zm503.7 0L405.6 191.5c-32.1-33.3-75.2-55.8-123.4-61.9L350.7 15.5C356.5 5.9 366.9 0 378.1 0H487.4C501 0 512 11 512 24.6c0 4.8-1.4 9.6-4.1 13.6zM80 336a176 176 0 1 1 352 0A176 176 0 1 1 80 336zm184.4-94.9c-3.4-7-13.3-7-16.8 0l-22.4 45.4c-1.4 2.8-4 4.7-7 5.1L168 298.9c-7.7 1.1-10.7 10.5-5.2 16l36.3 35.4c2.2 2.2 3.2 5.2 2.7 8.3l-8.6 49.9c-1.3 7.6 6.7 13.5 13.6 9.9l44.8-23.6c2.7-1.4 6-1.4 8.7 0l44.8 23.6c6.9 3.6 14.9-2.2 13.6-9.9l-8.6-49.9c-.5-3 .5-6.1 2.7-8.3l36.3-35.4c5.6-5.4 2.5-14.8-5.2-16l-50.1-7.3c-3-.4-5.7-2.4-7-5.1l-22.4-45.4z" />
-              </svg>
-              <p>4</p>
-            </span>
-          </div>
-          <p>International Collegiate Programming Contest (ICPC)</p>
-          <a class="btn abrir-modal" href="javascript:void(0);" onclick="abrirModal()">Ver Mais</a>
-        </div>
-        <div class="premiacao-item">
-          <img src="https://i.imgur.com/yVfhPiw.jpeg" alt="MFP">
-          <div class="medalhas">
-            <span>
-              <svg fill="#C39F00" fill-rule="evenodd" width="20px" height="20px" xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 512 512">
-                <path
-                  d="M4.1 38.2C1.4 34.2 0 29.4 0 24.6C0 11 11 0 24.6 0H133.9c11.2 0 21.7 5.9 27.4 15.5l68.5 114.1c-48.2 6.1-91.3 28.6-123.4 61.9L4.1 38.2zm503.7 0L405.6 191.5c-32.1-33.3-75.2-55.8-123.4-61.9L350.7 15.5C356.5 5.9 366.9 0 378.1 0H487.4C501 0 512 11 512 24.6c0 4.8-1.4 9.6-4.1 13.6zM80 336a176 176 0 1 1 352 0A176 176 0 1 1 80 336zm184.4-94.9c-3.4-7-13.3-7-16.8 0l-22.4 45.4c-1.4 2.8-4 4.7-7 5.1L168 298.9c-7.7 1.1-10.7 10.5-5.2 16l36.3 35.4c2.2 2.2 3.2 5.2 2.7 8.3l-8.6 49.9c-1.3 7.6 6.7 13.5 13.6 9.9l44.8-23.6c2.7-1.4 6-1.4 8.7 0l44.8 23.6c6.9 3.6 14.9-2.2 13.6-9.9l-8.6-49.9c-.5-3 .5-6.1 2.7-8.3l36.3-35.4c5.6-5.4 2.5-14.8-5.2-16l-50.1-7.3c-3-.4-5.7-2.4-7-5.1l-22.4-45.4z" />
-              </svg>
-              <p>10</p>
-            </span>
-            <span>
-              <svg fill="#8A8A8A" fill-rule="evenodd" width="20px" height="20px" xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 512 512">
-                <path
-                  d="M4.1 38.2C1.4 34.2 0 29.4 0 24.6C0 11 11 0 24.6 0H133.9c11.2 0 21.7 5.9 27.4 15.5l68.5 114.1c-48.2 6.1-91.3 28.6-123.4 61.9L4.1 38.2zm503.7 0L405.6 191.5c-32.1-33.3-75.2-55.8-123.4-61.9L350.7 15.5C356.5 5.9 366.9 0 378.1 0H487.4C501 0 512 11 512 24.6c0 4.8-1.4 9.6-4.1 13.6zM80 336a176 176 0 1 1 352 0A176 176 0 1 1 80 336zm184.4-94.9c-3.4-7-13.3-7-16.8 0l-22.4 45.4c-1.4 2.8-4 4.7-7 5.1L168 298.9c-7.7 1.1-10.7 10.5-5.2 16l36.3 35.4c2.2 2.2 3.2 5.2 2.7 8.3l-8.6 49.9c-1.3 7.6 6.7 13.5 13.6 9.9l44.8-23.6c2.7-1.4 6-1.4 8.7 0l44.8 23.6c6.9 3.6 14.9-2.2 13.6-9.9l-8.6-49.9c-.5-3 .5-6.1 2.7-8.3l36.3-35.4c5.6-5.4 2.5-14.8-5.2-16l-50.1-7.3c-3-.4-5.7-2.4-7-5.1l-22.4-45.4z" />
-              </svg>
-              <p>6</p>
-            </span>
-            <span>
-              <svg fill="#D77025" fill-rule="evenodd" width="20px" height="20px" xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 512 512">
-                <path
-                  d="M4.1 38.2C1.4 34.2 0 29.4 0 24.6C0 11 11 0 24.6 0H133.9c11.2 0 21.7 5.9 27.4 15.5l68.5 114.1c-48.2 6.1-91.3 28.6-123.4 61.9L4.1 38.2zm503.7 0L405.6 191.5c-32.1-33.3-75.2-55.8-123.4-61.9L350.7 15.5C356.5 5.9 366.9 0 378.1 0H487.4C501 0 512 11 512 24.6c0 4.8-1.4 9.6-4.1 13.6zM80 336a176 176 0 1 1 352 0A176 176 0 1 1 80 336zm184.4-94.9c-3.4-7-13.3-7-16.8 0l-22.4 45.4c-1.4 2.8-4 4.7-7 5.1L168 298.9c-7.7 1.1-10.7 10.5-5.2 16l36.3 35.4c2.2 2.2 3.2 5.2 2.7 8.3l-8.6 49.9c-1.3 7.6 6.7 13.5 13.6 9.9l44.8-23.6c2.7-1.4 6-1.4 8.7 0l44.8 23.6c6.9 3.6 14.9-2.2 13.6-9.9l-8.6-49.9c-.5-3 .5-6.1 2.7-8.3l36.3-35.4c5.6-5.4 2.5-14.8-5.2-16l-50.1-7.3c-3-.4-5.7-2.4-7-5.1l-22.4-45.4z" />
-              </svg>
-              <p>4</p>
-            </span>
-          </div>
-          <p>Maratona Feminina de Programação (MFP)</p>
-          <a class="btn abrir-modal" href="javascript:void(0);" onclick="abrirModal()">Ver Mais</a>
-        </div>
       </div>
     </section>
     <section class="redes">
@@ -238,7 +117,6 @@
               <path
                 d="M5.869652.12273C4.241769.19618 2.830805.5942 1.691486 1.72871.548187 2.86918.155147 4.28558.081514 5.89653c-.045772 1.00548-.313437 8.60165.462693 10.59375.52339 1.34394 1.55425 2.37721 2.910487 2.90228.632844.24616 1.355242.41291 2.414958.46155 8.860815.401 12.145437.18263 13.53053-3.36383.245774-.63128.414931-1.35288.461698-2.40997.40498-8.88354-.065673-10.80914-1.609972-12.3516C17.027016.50685 15.5862-.32492 5.869652.12273m.081593 17.94475c-.970162-.04368-1.496538-.20547-1.847786-.34145-.883594-.34343-1.547285-1.00448-1.888583-1.88291-.591053-1.51368-.39503-8.70289-.342293-9.86619.051742-1.13948.282591-2.18069 1.086582-2.98467.995038-.99258 2.280627-1.47894 11.033979-1.08389 1.142304.05161 2.186099.28189 2.99208 1.08389.995038.99257 1.488577 2.28788 1.086582 11.00765-.043782.96776-.205973 1.49283-.342293 1.84321-.90051 2.30773-2.97218 2.62833-11.778268 2.22436m8.138418-13.37792c0 .65709.534335 1.19109 1.194046 1.19109.65971 0 1.195041-.534 1.195041-1.19109 0-.65708-.535331-1.19109-1.195041-1.19109-.659711 0-1.194046.53401-1.194046 1.19109m-9.22699 5.29836c0 2.81494 2.287593 5.09687 5.109521 5.09687 2.821929 0 5.109522-2.28193 5.109522-5.09687s-2.287593-5.09587-5.109522-5.09587c-2.821928 0-5.109521 2.28093-5.109521 5.09587m1.793059 0c0-1.82633 1.484597-3.30825 3.316462-3.30825 1.831866 0 3.316463 1.48192 3.316463 3.30825 0 1.82733-1.484597 3.30924-3.316463 3.30924-1.831865 0-3.316462-1.48191-3.316462-3.30924" />
             </svg>
-
           </a>
         </li>
         <li>
