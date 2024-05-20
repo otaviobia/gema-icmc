@@ -21,7 +21,7 @@ function addNews(imagem, texto) {
   noticiaBox.appendChild(noticiaItem);
 }
 
-function addCampeonato(nome, nomeCompleto, imagem, medOuro, medPrata, medBronze, anos) {
+function addCampeonato(nome, nomeCompleto, imagem, medOuro, medPrata, medBronze, anos, data) {
   // Criar div principal
   const premiacaoItem = document.createElement("div");
   premiacaoItem.classList.add("premiacao-item");
@@ -73,7 +73,7 @@ function addCampeonato(nome, nomeCompleto, imagem, medOuro, medPrata, medBronze,
   botao.type = "button";
   botao.classList.add("btn", "abrir-modal");
   botao.textContent = "Ver Mais";
-  botao.onclick = function(){ openModal(anos, imagem, nomeCompleto + " (" + nome + ")") };
+  botao.onclick = function(){ openModal(data, anos, imagem, nomeCompleto + " (" + nome + ")") };
   premiacaoItem.appendChild(botao);
 
   // Adicionar ao DOM
@@ -94,7 +94,7 @@ async function getData() {
   // Adicionar campeonatos
   for (i = data["campeonatos"].length-3; i < data["campeonatos"].length; i++) {
     let it = data["campeonatos"][i];
-    addCampeonato(it["nome"], it["nomeCompleto"], it["imagem"], it["medalhas"]["ouro"]["total"], it["medalhas"]["prata"]["total"], it["medalhas"]["bronze"]["total"], i);
+    addCampeonato(it["nome"], it["nomeCompleto"], it["imagem"], it["medalhas"]["ouro"]["total"], it["medalhas"]["prata"]["total"], it["medalhas"]["bronze"]["total"], i, data);
   }
 }
 
@@ -132,7 +132,7 @@ const modal = document.querySelector(".modal-olimpiada");
 const botaoFecharModal = document.querySelector(".close");
 const body = document.querySelector("body");
 
-function openModal(anos, imagem, nome) {
+function openModal(data, anos, imagem, nome) {
   const modalBase = document.querySelector(".modal-base");
   modalBase.innerHTML = '';
   document.querySelector(".foto-olimpiada").src = imagem;
