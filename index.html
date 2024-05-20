@@ -6,7 +6,6 @@
   <title>GEMA</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./assets/css/styles.css">
-  <link rel="stylesheet" href="./assets/css/normalize.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon-16x16.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon-32x32.png">
   <meta name="msapplication-TileColor" content="#191946">
@@ -16,7 +15,6 @@
   <meta property="og:description" content="O  Grupo de Estudos para a Maratona de Programação é um grupo de extensão do ICMC, sediado na USP de São Carlos, que treina para as principais competições de programação competitiva do país.">
   <meta property="og:image" content="https://linktr.ee/og/image/gema.icmc.usp.jpg">
   <meta property="og:url" content="https://gema.icmc.usp.br">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -38,7 +36,7 @@
   </div>
   <header>
     <nav>
-      <a href="">
+      <a href="" title="GEMA">
         <img class="logo" src="./assets/img/logo-gema.png" alt="GEMA">
       </a>
       <ul>
@@ -55,13 +53,13 @@
     </nav>
   </header>
   <article class="container">
-    <section class="hero">
+    <section class="hero fundo-azul">
       <div class="hero-left">
         <span></span>
         <div class="texto-hero">
           <h1>O Grupo de Programação<br>Competitiva da USP.</h1>
           <p>Quer aprender os algoritmos mais avançados<br>e ganhar medalhas? Cola com a gente!</p>
-          <button type="button" class="btn" onclick="mostrarSobre()">Conhecer</button>
+          <button type="button" class="btn" onclick="showAbout()">Conhecer</button>
         </div>
         <div class="logos-hero">
           <img src="./assets/img/logo-usp.png" alt="USP">
@@ -72,37 +70,35 @@
         <img src="./assets/img/baloes.png" alt="Balões">
       </div>
     </section>
-    <section class="sobre">
-      <div class="sobre-content">
-        <span>
+    <section class="full-width fundo-branco">
+      <div class="section-row">
+        <span class="sobre">
           <h1>Quem somos?</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget hendrerit felis, eget commodo tortor.
-            Praesent eu arcu in lacus sagittis maximus. In hac habitasse platea dictumst. Maecenas varius purus at lacus
-            luctus ullamcorper. Duis consectetur sem eros, id finibus enim gravida eget. Ut dapibus, metus sed tempor
-            rutrum, urna nibh efficitur felis, ac ultrices nibh leo vel nisl. Suspendisse eget velit gravida, rutrum
-            lorem a, maximus elit. Nulla in elementum ligula.</p>
+          <p class="cinza">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget hendrerit felis, eget commodo tortor. Praesent eu arcu in lacus sagittis maximus. In hac habitasse platea dictumst. Maecenas varius purus at lacus luctus ullamcorper. Duis consectetur sem eros, id finibus enim gravida eget. Ut dapibus, metus sed tempor rutrum, urna nibh efficitur felis, ac ultrices nibh leo vel nisl. Suspendisse eget velit gravida, rutrum lorem a, maximus elit. Nulla in elementum ligula.</p>
         </span>
-        <img src="./assets/img/fotos-membros.png" alt="Fotos de Membros">
+        <img class="membros-imagem" src="./assets/img/fotos-membros.png" alt="Fotos de Membros">
       </div>
     </section>
-    <section class="midia">
+    <section class="section-column fundo-azul">
       <h1>GEMA na Mídia</h1>
-      <p>Veja o que andam falando do GEMA!</p>
+      <p class="subtitulo">Veja o que andam falando do GEMA!</p>
       <div class="noticias-box">
       </div>
     </section>
-    <section class="premiacoes">
-      <h1>Premiações do GEMA!</h1>
-      <p>Veja o que já ganhamos por aí ;)</p>
-      <div class="premiacoes-box">
+    <section class="full-width fundo-branco">
+      <div class="section-column">
+        <h1>Premiações do GEMA!</h1>
+        <p class="subtitulo cinza">Veja o que já ganhamos por aí ;)</p>
+        <div class="premiacoes-box">
+        </div>
       </div>
     </section>
-    <section class="redes">
+    <section class="section-column fundo-azul">
       <h1>Embarque Conosco!</h1>
-      <p>Fique conectado com o Gema!</p>
+      <p class="subtitulo">Fique conectado com o Gema!</p>
       <ul class="redes-sociais">
         <li>
-          <a href="https://www.youtube.com/@GEMAICMC">
+          <a href="https://www.youtube.com/@GEMAICMC" title="YouTube">
             <svg fill="#C39F00" fill-rule="evenodd" width="50px" height="50px" viewBox="0 -3 20 20"
               xmlns="http://www.w3.org/2000/svg">
               <path
@@ -111,7 +107,7 @@
           </a>
         </li>
         <li>
-          <a href="https://instagram.com/gema.icmc?igshid=YTQwZjQ0NmI0OA==">
+          <a href="https://instagram.com/gema.icmc?igshid=YTQwZjQ0NmI0OA==" title="Instagram">
             <svg fill="#C39F00" fill-rule="evenodd" width="50px" height="50px" viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg">
               <path
@@ -120,7 +116,7 @@
           </a>
         </li>
         <li>
-          <a href="http://bit.ly/gema023">
+          <a href="http://bit.ly/gema023" title="Telegram">
             <svg fill="#C39F00" fill-rule="evenodd" width="50px" height="50px" viewBox="0 0 32 32"
               xmlns="http://www.w3.org/2000/svg">
               <path
@@ -132,7 +128,7 @@
     </section>
   </article>
   <footer>
-    <div class="footer-content">
+    <div>
       <p>Gema - ICMC USP 2024</p>
       <p>Desenvolvido pelo <a href="https://codelab-icmc.netlify.app/">Codelab</a></p>
     </div>

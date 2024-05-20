@@ -1,17 +1,22 @@
+/* || BASE DE DADOS EM .JSON */
+
 function addNews(imagem, texto) {
+  // Criar div da notícia
   const noticiaItem = document.createElement("div");
   noticiaItem.classList.add("noticia-item");
 
+  // Adicionar imagem da notícia
   const noticiaImage = document.createElement("img");
   noticiaImage.src = imagem;
   noticiaImage.alt = texto;
+  noticiaItem.appendChild(noticiaImage);
 
+  // Adicionar texto da notícia
   const noticiaTexto = document.createElement("p");
   noticiaTexto.textContent = texto;
-
-  noticiaItem.appendChild(noticiaImage);
   noticiaItem.appendChild(noticiaTexto);
-
+  
+  // Adicionar ao DOM
   const noticiaBox = document.querySelector(".noticias-box");
   noticiaBox.appendChild(noticiaItem);
 }
@@ -68,7 +73,7 @@ function addCampeonato(nome, nomeCompleto, imagem, medOuro, medPrata, medBronze,
   botao.type = "button";
   botao.classList.add("btn", "abrir-modal");
   botao.textContent = "Ver Mais";
-  botao.onclick = function(){abrirModal(anos, imagem, nomeCompleto + " (" + nome + ")")};
+  botao.onclick = function(){ openModal(anos, imagem, nomeCompleto + " (" + nome + ")") };
   premiacaoItem.appendChild(botao);
 
   // Adicionar ao DOM
@@ -76,28 +81,29 @@ function addCampeonato(nome, nomeCompleto, imagem, medOuro, medPrata, medBronze,
   premiacoesBox.appendChild(premiacaoItem);
 }
 
-var data;
-
 async function getData() {
+  // Coletar dados
   const response = await fetch("./assets/data/gema-data.json");
-  data = await response.json();
+  const data = await response.json();
 
-  for (i = 0; i < data["Noticias"].length; i++) {
+  // Adicionar notícias
+  for (i = data["Noticias"].length-3; i < data["Noticias"].length; i++) {
     addNews(data["Noticias"][i]["imagem"], data["Noticias"][i]["titulo"]);
   }
 
-  for (i = 0; i < data["campeonatos"].length; i++) {
+  // Adicionar campeonatos
+  for (i = data["campeonatos"].length-3; i < data["campeonatos"].length; i++) {
     let it = data["campeonatos"][i];
     addCampeonato(it["nome"], it["nomeCompleto"], it["imagem"], it["medalhas"]["ouro"]["total"], it["medalhas"]["prata"]["total"], it["medalhas"]["bronze"]["total"], i);
   }
 }
+
 getData();
 
-window.onscroll = function() { stickyHeader() };
+/* || CABEÇALHO GRUDENTO */
 
-var header = document.querySelector("header");
-
-var sticky = header.offsetTop;
+const header = document.querySelector("header");
+const sticky = header.offsetTop;
 
 function stickyHeader() {
   if (window.scrollY > sticky)
@@ -110,18 +116,23 @@ function stickyHeader() {
   }
 }
 
-var sobre = document.querySelector(".sobre");
+window.onscroll = function() { stickyHeader() };
 
-function mostrarSobre() {
+/* || BOTÃO CONHECER */
+
+const sobre = document.querySelector(".membros-imagem");
+
+function showAbout() {
   sobre.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
 }
 
-var modal = document.querySelector(".modal-olimpiada");
-var botaoFecharModal = document.querySelector(".close");
+/* || MODAL */
 
-var body = document.querySelector("body");
+const modal = document.querySelector(".modal-olimpiada");
+const botaoFecharModal = document.querySelector(".close");
+const body = document.querySelector("body");
 
-function abrirModal(anos, imagem, nome) {
+function openModal(anos, imagem, nome) {
   const modalBase = document.querySelector(".modal-base");
   modalBase.innerHTML = '';
   document.querySelector(".foto-olimpiada").src = imagem;
@@ -139,7 +150,7 @@ function abrirModal(anos, imagem, nome) {
     const listaPremiados = document.createElement("ol");
     for(j = 0; j < Object.keys(data["campeonatos"][anos]["anos"][valorAno]).length; j++) {
       const itemPremiado = document.createElement("li");
-      var corMedalha;
+      let corMedalha;
       switch (data["campeonatos"][anos]["anos"][valorAno][j]["medalha"]) {
         case "ouro":
           corMedalha = "#C39F00";
@@ -166,17 +177,20 @@ function abrirModal(anos, imagem, nome) {
   header.style.display = "none";
 }
 
-botaoFecharModal.onclick = function() {
+function closeModal()
+{
   modal.style.display = "none";
   body.classList.remove("bloquear-scroll");
   header.style.display = "flex";
 }
 
-// Quando usuário clicar fora do modal, feche-o
+botaoFecharModal.onclick = function() {
+  closeModal();
+}
+
+// Fechar modal se usuário clicar fora dele
 window.onclick = function(event) {
   if (event.target == modal) {
-    modal.style.display = "none";
-    body.classList.remove("bloquear-scroll");
-    header.style.display = "flex";
+    closeModal();
   }
 }
