@@ -9,9 +9,10 @@
 
   <p align="center">
 Página Web para o  (GEMA), do ICMC
+  </p>
     <br/>
     <a href="https://otavio.fun/gema-icmc"><strong>Veja a Demonstração »</strong></a>
-
+</div>
 <!-- ABOUT THE PROJECT -->
 ## Sobre o Projeto
 
