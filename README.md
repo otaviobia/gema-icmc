@@ -13,6 +13,7 @@ Página Web para o  (GEMA), do ICMC
     <br/>
     <a href="https://otavio.fun/gema-icmc"><strong>Veja a Demonstração »</strong></a>
 </div>
+
 <!-- ABOUT THE PROJECT -->
 ## Sobre o Projeto
 
@@ -26,9 +27,11 @@ Adorei trabalhar nesse projeto e espero desenvolver mais trabalhos similares no 
 
 ### Construído com
 
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg" alt="HTML" width="50" height="50"/>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg" alt="CSS" width="50" height="50"/>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="Javascript" width="50" height="50"/>
+<div align="center">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg" alt="HTML" width="50" height="50"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg" alt="CSS" width="50" height="50"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="Javascript" width="50" height="50"/>
+</div>
 
 <!-- LICENSE -->
 ## Licença
