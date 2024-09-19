@@ -19,9 +19,9 @@ Página Web para o  (GEMA), do ICMC
 
 ![Página Principal](https://i.imgur.com/9EXIbnc.png)
 
-O projeto foi desenvolvido junto ao grupo [CodeLabs](https://codelab-icmc.netlify.app/) e visava a criação de uma Landing Page para o **Grupo de Estudos para a Maratona de Programação (GEMA)**, um grupo de extensão do ICMC, sediado na USP de São Carlos, que treina para as principais competições de programação competitiva do país.
+O projeto foi desenvolvido junto ao grupo [CodeLab](https://codelab.icmc.usp.br/) e visava a criação de uma Landing Page para o **Grupo de Estudos para a Maratona de Programação (GEMA)**, um grupo de extensão do ICMC, sediado na USP de São Carlos, que treina para as principais competições de programação competitiva do país.
 
-A página segue os princípios do **Web design responsivo**, permitindo que ela seja acessada por qualquer pessoa em qualquer dispositivo. Além disso, os dados da página são carregados dinamicamente  por meio de um arquivo JSON, tornando a atualização do conteúdo do site mais simples.
+A página segue os princípios do **Web design responsivo**, permitindo que ela seja acessada por qualquer pessoa em qualquer dispositivo. Além disso, os dados da página são carregados dinamicamente por meio de um arquivo JSON, tornando a atualização do conteúdo do site mais simples.
 
 Adorei trabalhar nesse projeto e espero desenvolver mais trabalhos similares no futuro!
 
